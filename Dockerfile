@@ -91,7 +91,8 @@ RUN --mount=type=secret,id=api_keys \
     rm -rf /var/lib/apt/lists/*
 
 # Local installations
-RUN pip3 install requests numpy pandas
+RUN apt-get update && \
+    apt-get install -y python3-requests python3-numpy python3-pandas
 
 # Expose apache
 EXPOSE 80
