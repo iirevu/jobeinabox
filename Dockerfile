@@ -92,7 +92,8 @@ RUN --mount=type=secret,id=api_keys \
 
 # Local installations
 RUN apt-get update && \
-    apt-get install -y python3-requests python3-numpy python3-pandas
+    apt-get install -y python3-requests python3-numpy python3-pandas \
+            python3-venv
 
 # Expose apache
 EXPOSE 80
